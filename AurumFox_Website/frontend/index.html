@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum Fox Portal: Web3 & Multimedia Ecosystem</title>
+    <meta name="description" content="Official portal of the Aurum Fox meme coin, combining Web3 functions (Games, NFTs, Advertising, DAO, Staking) and a multimedia hub (Photos, Posts, Mini-Games). Your gateway to the AFOX ecosystem on Solana.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght%40300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js" type="application/javascript"></script>
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-base@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-phantom@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/spl-token@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/@solana/wallet-adapter-wallets@latest/lib/index.iife.js"></script>
+    <script src="https://unpkg.com/bn.js@5.2.0/lib/bn.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/foxcoin-hero.png" alt="Aurum Fox Logo" class="logo-img">
+                <span class="logo-text">Aurum Fox Portal</span>
+            </div>
+            <nav class="nav">
+                <div id="menuToggle" class="menu-toggle" aria-controls="mainNav" aria-expanded="false" role="button" tabindex="0">
+                    <div class="hamburger"></div>
+                </div>
+                <ul id="mainNav" class="main-nav" role="navigation" aria-hidden="true">
+                    <span class="close-menu-button" id="closeMainMenuCross" role="button" tabindex="0" aria-label="Close menu">&times;</span>
+
+                    <li><a href="#aurum-fox-home">Aurum Fox</a></li>
+                    <li><a href="#about-afox">About AFOX</a></li>
+                    <li><a href="#tokenomics">Tokenomics</a></li>
+                    <li><a href="#how-to-buy">Acquire AFOX</a></li>
+                    <li><a href="#aurum-nfts">Aurum NFTs</a></li>
+                    <li><a href="#aurum-nfc">Aurum NFC</a></li>
+                    <li><a href="#aurum-roadmap">Roadmap</a></li>
+                    <li><a href="#aurum-news">News</a></li>
+                    <li><a href="#aurum-announcements">Announcements</a></li>
+                    <li><a href="#aurum-community">Community</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                    <li><a href="#web3-site-home">Web3 Portal</a></li>
+                    <li><a href="#games-section">Games</a></li>
+                    <li><a href="#nft-section">NFT Portal</a></li>
+                    <li><a href="#ads-section">Advertising</a></li>
+                    <li><a href="#dao-section">DAO</a></li>
+                    <li><a href="#staking-section">Staking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="aurum-fox-home" class="hero-section aurum-fox-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Aurum Fox: Your Golden Luck on Solana!</h1>
+                    <p class="tagline intro-text">Combining the cunning of the fox, the prosperity of gold, and the speed of Solana.</p>
+                    <div class="hero-buttons call-to-action">
+                        <a href="#how-to-buy" class="btn btn-primary primary-btn">Get AFOX</a>
+                        <a href="#aurum-community" class="btn btn-secondary secondary-btn">Join the Community</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/foxcoin-hero.png" alt="Aurum Fox golden coin with fox image and 'Aurum Fox' text">
+                </div>
+            </div>
+        </section>
+
+        <section id="about-afox" class="section aurum-fox-section-alt">
+            <div class="container">
+                <h2 class="aurum-heading">About Our AURUM FOX (AFOX) Meme Token</h2>
+                <p>Welcome to the world of <strong>AURUM FOX!</strong> We are a new, fully decentralized meme token, created by the community and for the community. Our goal is to create a fun, dynamic, and truly community-driven meme token on the Solana blockchain.</p>
+                <p><strong>AURUM FOX</strong> is a meme token presented as a golden coin with a cute cartoon fox image and the inscription "AURUM FOX". Its name combines the Latin "Aurum" (gold), symbolizing value, and "Fox" – a popular image for creating viral brands in the meme token space.</p>
+                <p>We believe in transparency and fairness. All permissions for <strong>minting</strong> (creating new tokens) and <strong>freezing</strong> (locking existing tokens) have been <strong>irrevocably revoked</strong>. This ensures a fixed total supply and the inability to lock your assets. No one, not even the creators, can issue new tokens or interfere with your holdings. AURUM FOX (AFOX) is a 100% community-governed meme token.</p>
+            </div>
+        </section>
+
+        <section id="tokenomics" class="section aurum-fox-section">
+            <div class="container">
+                <h2 class="aurum-heading">Aurum Fox Tokenomics</h2>
+                <div class="tokenomics-grid tokenomics-details">
+                    <div class="tokenomics-item">
+                        <h3>Total Supply</h3>
+                        <p class="highlight">10,000,000 AFOX</p>
+                        <p>A limited and fixed supply ensures the scarcity of Aurum Fox (AFOX).</p>
+                        <p class="highlight-text-small"><strong>Minting rights revoked</strong></p>
+                        <p class="highlight-text-small"><strong>Freezing rights revoked</strong></p>
+                        <p>This demonstrates our commitment to decentralization and security for all holders.</p>
+                    </div>
+                    <div class="tokenomics-item">
+                        <h3>Vesting Schedule</h3>
+                        <p>To ensure long-term stability and prevent market manipulation, a portion of the supply will be released according to the following vesting schedule:</p>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Vesting Period</th>
+                                        <th>Release Percentage</th>
+                                        <th>AFOX Unlocked</th>
+                                        <th>Start Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Period 1</td>
+                                        <td>20%</td>
+                                        <td>1,800,000 AFOX</td>
+                                        <td>June 23, 2027, 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Period 2</td>
+                                        <td>20%</td>
+                                        <td>1,800,000 AFOX</td>
+                                        <td>June 24, 2029, 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Period 3</td>
+                                        <td>20%</td>
+                                        <td>1,800,000 AFOX</td>
+                                        <td>June 25, 2031, 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Period 4</td>
+                                        <td>20%</td>
+                                        <td>1,800,000 AFOX</td>
+                                        <td>June 26, 2033, 12:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Period 5</td>
+                                        <td>20%</td>
+                                        <td>1,800,000 AFOX</td>
+                                        <td>June 27, 2035, 12:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="contract-address">
+                    <p><strong>AFOX Contract Address:</strong> <span id="contractAddress" class="highlight-text">GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd</span> <button class="copy-btn">Copy</button></p>
+                </div>
+                <p class="tokenomics-note">Our tokenomics are designed for long-term sustainability and community growth.</p>
+            </div>
+        </section>
+
+        <section id="how-to-buy" class="section aurum-fox-section-alt">
+            <div class="container">
+                <h2 class="aurum-heading">How to acquire Aurum Fox (AFOX)</h2>
+                <p>There are several ways to become part of our community and get AURUM FOX (AFOX):</p>
+                <ol class="buy-steps how-to-list">
+                    <li>
+                        <h3>Step 1: Participate in airdrops</h3>
+                        <p>Follow our official channels to stay informed about upcoming airdrop announcements. Participate in community events for a chance to get free tokens!</p>
+                    </li>
+                    <li>
+                        <h3>Step 2: Get a Solana wallet</h3>
+                        <p>You'll need a wallet that supports the Solana network, such as <a href="https://phantom.app/" target="_blank" rel="noopener noreferrer">Phantom</a>, <a href="https://solflare.com/" target="_blank" rel="noopener noreferrer">Solflare</a>, <a href="https://jup.ag/docs/wallet-integration" target="_blank" rel="noopener noreferrer">Jupiter</a> or <a href="https://trustwallet.com/" target="_blank" rel="noopener noreferrer">Trust Wallet</a>. Install it as a browser extension or mobile application.</p>
+                    </li>
+                    <li>
+                        <h3>Step 3: Fund your wallet with SOL</h3>
+                        <p>Buy SOL (Solana) on any major centralized exchange (Binance, Coinbase, Bybit, etc.) and send it to the address of your chosen Solana wallet.</p>
+                    </li>
+                    <li>
+                        <h3>Step 4: Go to a DEX and swap SOL for AFOX</h3>
+                        <p>Use a Solana Decentralized Exchange (DEX) such as <a href="https://raydium.io/swap/" target="_blank" rel="noopener noreferrer">Raydium</a> or <a href="https://www.orca.so/swap" target="_blank" rel="noopener noreferrer">Orca</a> to swap SOL for AFOX.</p>
+                        <p>On the swap page, paste the AFOX contract address (<span class="highlight-text">GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd</span>) into the field for the token you want to receive. Confirm the transaction in your wallet.</p>
+                        <p>
+                            Or use aggregators for more accurate coin information:
+                            <ul>
+                                <li><a href="https://www.geckoterminal.com/solana/pools/GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd" target="_blank" rel="noopener noreferrer">GeckoTerminal</a></li>
+                                <li><a href="https://www.dextools.io/app/solana/pair-explorer/GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd" target="_blank" rel="noopener noreferrer">DEXTools</a></li>
+                                <li><a href="https://birdeye.so/token/GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd?chain=solana" target="_blank" rel="noopener noreferrer">Birdeye</a></li>
+                                <li><a href="https://gmgn.ai/solana/token/GDk2UfqfWPepQBZB8BMVMCUnbLbhRCuhK6VzLBpR2HAr" target="_blank" rel="noopener noreferrer">GMGN.AI</a></li>
+                                 <li><a href="https://dexscreener.com/solana/GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd" target="_blank" rel="noopener noreferrer">Dexscreener</a></li>
+                                <li><a href="https://photon-sol.tinyastro.io/en/lp/FxkhmwaB144YDemgrfX4K5W2Jotz8YXaFpkMD4Pa9JKz" target="_blank" rel="noopener noreferrer">Photon Solana LP</a></li>
+                            </ul>
+                        </p>
+                    </li>
+                </ol>
+                <p class="tip">Make sure you have enough SOL to cover network fees.</p>
+                <p class="tip"><i>Liquidity pool link will be available soon!</i></p>
+                <button class="web3-btn">Trade AFOX on Raydium</button>
+            </div>
+        </section>
+
+        <section id="aurum-nfts" class="section aurum-fox-section">
+            <div class="container">
+                <h2 class="aurum-heading">Aurum Fox NFT: Unleashing Digital Treasures</h2>
+                <p>Beyond being a meme token, Aurum Fox aims to delve into the exciting world of Non-Fungible Tokens (NFTs). Our vision includes creating exclusive Aurum Fox NFT collections that embody the spirit of luck, prosperity, and the cunning of the fox.</p>
+                <ul>
+                    <li>Exclusive access to community events or channels.</li>
+                    <li>Staking opportunities to earn additional AFOX tokens.</li>
+                    <li>Participation in governance or decision-making for future projects.</li>
+                    <li>Unique artworks celebrating the Aurum Fox brand.</li>
+                </ul>
+                <div class="nft-showcase">
+                    <div class="nft-card">
+                        <img src="https://via.placeholder.com/150/ffd700/000000?text=AFOX+NFT+1" alt="Aurum Fox Genesis NFT #001, rare first edition">
+                        <h4>Aurum Fox Genesis #001</h4>
+                        <p>Rare first edition collectible.</p>
+                    </div>
+                    <div class="nft-card">
+                        <img src="https://via.placeholder.com/150/c0c0c0/000000?text=AFOX+NFT+2" alt="Aurum Fox Guardian NFT #002, grants staking bonus">
+                        <h4>Aurum Fox Guardian #002</h4>
+                        <p>Grants staking bonus.</p>
+                    </div>
+                </div>
+                <p>A dedicated portion of our tokenomics is directed to the "NFT Fund" to support the development, marketing, and expansion of these future NFT projects. Stay tuned for announcements of our first official Aurum Fox NFT collection!</p>
+                <button class="web3-btn">View Collection on Magic Eden</button>
+            </div>
+        </section>
+
+        <section id="aurum-nfc" class="section aurum-fox-section-alt">
+            <div class="container">
+                <h2 class="aurum-heading">🦊 Aurum Fox NFC: Interactive Future</h2>
+                <p>Dive into a new level of interaction with Aurum Fox! We are exploring the possibilities of Near Field Communication (NFC) to create a seamless connection between our digital assets and the real world.</p>
+
+                <div class="nfc-grid">
+                    <div class="nfc-item">
+                        <h3>AFOX NFT Authenticity</h3>
+                        <img src="https://via.placeholder.com/150?text=NFT+NFC+Scan" alt="Smartphone scanning an NFC tag on an NFT" class="nfc-icon">
+                        <p>Verify the authenticity of your physical Aurum Fox NFT collectibles using NFC. Simply tap your smartphone to an NFC-chipped item to instantly check its blockchain status and receive exclusive information.</p>
+                    </div>
+                    <div class="nfc-item">
+                        <h3>Exclusive Access and Events</h3>
+                        <img src="https://via.placeholder.com/150?text=Event+NFC" alt="Smartphone tapping an NFC tag for event access" class="nfc-icon">
+                        <p>Use NFC tags to gain access to private community meetups, airdrops, or unique content. Your physical presence unlocks digital doors!</p>
+                    </div>
+                    <div class="nfc-item">
+                        <h3>Interactive Advertising</h3>
+                        <img src="https://via.placeholder.com/150?text=Ad+NFC+Tap" alt="Person tapping phone to an ad with NFC" class="nfc-icon">
+                        <p>Advertisers can integrate NFC into their campaigns. Tap a physical NFC tag to be directed to interactive ads, special offers, or partner promotions directly on our portal.</p>
+                    </div>
+                </div>
+                <p class="nfc-note"><i>Note: NFC functionality is under development and will be implemented in future roadmap phases.</i></p>
+            </div>
+        </section>
+
+        <section id="aurum-roadmap" class="section aurum-fox-section">
+            <div class="container">
+                <h2 class="aurum-heading">Aurum Fox Roadmap</h2>
+                <div class="roadmap-grid">
+                    <div class="roadmap-item">
+                        <h3>Phase 1: Launch and Awareness (Completed)</h3>
+                        <ul>
+                            <li>Development and deployment of the AFOX token on Solana.</li>
+                            <li>Creation and launch of the liquidity pool.</li>
+                            <li>Launch of official social channels (Twitter, Telegram, Discord).</li>
+                            <li>First wave of memes and viral content.</li>
+                            <li><strong>Minting rights revoked.</strong></li>
+                            <li><strong>Freezing rights revoked.</strong></li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-item">
+                        <h3>Phase 2: Community Growth and Visibility</h3>
+                        <ul>
+                            <li>Launch of the official Aurum Fox website (current stage).</li>
+                            <li>Application for listing on CoinGecko and CoinMarketCap.</li>
+                            <li>Expansion of marketing campaigns and influencer collaborations.</li>
+                            <li>Hosting meme contests and airdrops for active participants.</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-item">
+                        <h3>Phase 3: Innovation and Expansion</h3>
+                        <ul>
+                            <li><strong>Launch of unique Aurum Fox NFT collections.</strong></li>
+                            <li>Exploration of utility functions for Aurum Fox NFTs.</li>
+                            <li>Potential partnerships with other Solana projects.</li>
+                            <li>Development of gaming or additional utility features for AFOX (based on community demand).</li>
+                            <li>Preparation for potential listings on Centralized Exchanges (CEX).</li>
+                            <li>Implementation of DAO and governance.</li>
+                            <li>Development of a staking platform.</li>
+                            <li>Gaming integrations.</li>
+                            <li>Multimedia portal enhancements.</li>
+                            <li>NFC utility development.</li>
+                            <li>Cross-chain research.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="roadmap-disclaimer"><i>Note: The Aurum Fox roadmap is dynamic and may be adjusted based on market conditions and community feedback.</i></p>
+            </div>
+        </section>
+
+        <section id="aurum-news" class="section aurum-fox-section-alt">
+            <div class="container">
+                <h2 class="aurum-heading">Aurum Fox News and Updates</h2>
+                <div class="news-content news-list">
+                    <p class="loading-message">Loading news and posts...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aurum-announcements" class="section aurum-fox-section">
+            <div class="container">
+                <h2 class="aurum-heading">Aurum Fox Announcements</h2>
+                <div class="admin-announcement-section">
+                    <h3>Publish New Announcement (Admin Only)</h3>
+                    <textarea id="announcementInput" placeholder="Enter your new announcement here..."></textarea>
+                    <button id="publishButton">Publish Announcement</button>
+                </div>
+                <hr>
+                <h3>Published Announcements</h3>
+                <div id="announcementsList" class="announcements-list">
+                    <p class="loading-message">Loading announcements...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="aurum-community" class="section aurum-fox-section-alt">
+            <div class="container">
+                <h2 class="aurum-heading">Join the AFOX Community!</h2>
+                <p>Become part of our rapidly growing and friendly community. Together, we will build something special and share the luck of Aurum Fox!</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/AR7vnJVE" target="_blank" rel="noopener noreferrer" class="social-btn discord-btn">
+                        <svg class="social-icon" viewBox="0 0 448 512"><path fill="currentColor" d="M297.2 92.5C336.5 98.7 368 116.3 368 116.3V151.7C368 151.7 328.5 137.5 299.7 136.2C288.7 135.8 276.1 136.6 261.6 138.8C202.4 147.2 165.8 171.1 165.8 171.1L170 167.3C136.4 179.6 100.9 203.2 100.9 203.2L90.4 207.2C100.2 198.8 113.8 189.9 129.5 180.8L124.7 176.6C124.7 176.6 141.7 167 159.2 161C172.9 156.4 187.9 153.8 203.8 153.2C226.5 152.4 246.6 153.3 260.6 154.9C281.3 157.4 297.2 160 297.2 160L290.7 158.1C305.9 160.7 319.4 162.7 330.4 164.7C338.9 166.4 346.8 168.1 353.4 169.8C349.5 169.8 344.6 169.9 339.6 169.9C331.4 170.2 323 170.6 314.4 171.2C307.3 171.8 300.2 172.5 293.2 173.3C285.8 174.1 278.4 175.1 271 176.2C247.9 179.4 225.2 182.7 203.8 186.1C194.2 187.6 184.8 189.2 175.7 190.9C166.8 192.6 158.1 194.5 149.5 196.5C141.2 198.5 133.2 200.6 125.4 202.8C117.8 204.9 110.4 207.1 103.2 209.4L107.5 212.7C107.5 212.7 131.6 221 155.6 230.1C183.4 240.7 212.6 251.8 243.6 262.9C274.6 274 307.4 284.9 342.3 295.4L339.6 295.4C342.3 295.4 345 295.3 347.7 295.2L352.4 294.9C361.6 294.4 370.8 293.8 379.9 293.1C388.9 292.4 398 291.6 407 290.8C415.8 290 424.6 289.2 433.4 288.5C442.2 287.7 451 287.1 459.8 286.5L462.5 286.4C448 298.5 423.8 316.5 397.6 331.5C384.8 338.4 372.1 345.1 359.4 351.6C346.6 358.1 333.9 364.5 321.2 370.7C308.5 376.9 295.8 383.1 283.1 389.1C270.4 395.1 257.7 401.1 245 406.8C232.3 412.5 219.6 418.1 206.9 423.6C194.2 429.1 181.5 434.5 168.8 439.8C156.1 445.1 143.4 450.4 130.7 455.5L128 456C128 456 109.9 450.2 87.8 438.4C65.7 426.6 45.4 408.8 29.2 387.6L29.2 387.6L27.5 385.4C26.5 384.3 25.6 383.2 24.8 382.1C18.6 373.1 14 363.1 11.2 352.2C8.5 341.2 7.1 329.8 7.1 318C7.1 278.4 43.1 246.6 86.8 231.1C91.4 229.5 96.1 227.9 100.9 226.3C105.7 224.7 110.5 223.1 115.4 221.5C120.3 219.9 125.2 218.4 130.1 216.8C135.1 215.3 140.1 213.7 145.1 212.2C150.1 210.7 155.1 209.2 160.2 207.7C165.2 206.2 170.3 204.7 175.4 203.2C180.5 201.7 185.7 200.2 190.8 198.8C196 197.3 201.1 195.9 206.3 194.5C211.5 193.1 216.6 191.7 221.8 190.4C226.9 189 232.1 187.7 237.3 186.4C242.4 185.1 247.6 183.9 252.8 182.7C258 181.5 263.1 180.3 268.3 179.1C273.5 177.9 278.7 176.8 283.8 175.7C289 174.6 294.2 173.5 299.4 172.5C304.6 171.4 309.8 170.4 315 169.4C320.1 168.4 325.3 167.5 330.5 166.6C335.7 165.7 340.9 164.8 346.1 163.9C351.3 163.1 356.5 162.2 361.7 161.4C366.9 160.6 372.1 159.8 377.3 159.1C382.5 158.3 387.7 157.6 392.9 156.9C398.1 156.2 403.3 155.5 408.5 154.9L408.5 154.9L416.7 153.9C403.9 146.7 387.5 137 368 126.8C359.8 122.5 351.5 118.1 343.3 113.8C335.1 109.5 326.8 105.1 318.5 100.8C310.3 96.5 302 92.1 293.8 87.8L297.2 92.5ZM224 372.3C224 380.2 230.1 386.3 238 386.3C245.9 386.3 252 380.2 252 372.3C252 364.4 245.9 358.3 238 358.3C230.1 358.3 224 364.4 224 372.3ZM160 372.3C160 380.2 166.1 386.3 174 386.3C181.9 386.3 188 380.2 188 372.3C188 364.4 181.9 358.3 174 358.3C166.1 358.3 160 364.4 160 372.3Z"/></svg>
+                        Discord
+                    </a>
+                    <a href="https://t.me/+J2c790PJUSI4OWI0" target="_blank" rel="noopener noreferrer" class="social-btn telegram-btn">
+                        <svg class="social-icon" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm121.841 185.556l-67.453 61.248c-1.391 1.264-3.12 1.94-4.887 1.94H192.5c-3.155 0-5.748-2.593-5.748-5.748V177.16c0-3.155 2.593-5.748 5.748-5.748h22.684c3.155 0 5.748 2.593 5.748 5.748v44.204l44.383-40.354c1.391-1.264 3.12-1.94 4.887-1.94s3.496.676 4.887 1.94l13.568 12.355c3.784 3.443 3.966 9.617.408 13.24L261.2 264.408c-3.558 3.623-3.74 9.797-.408 13.24l68.212 62.062c3.784 3.443 9.957 3.26 13.568-.408l13.568-12.355c3.496-3.186 3.65-9.255.408-12.698L307.72 264.408c-3.558-3.623-3.74-9.797-.408-13.24l68.212-62.062c3.784-3.443 3.966-9.617.408-13.24l-13.568-12.355c-3.496-3.186-9.565-3.032-12.91-1.423zM157.994 286.91l-38.384 34.908c-3.784 3.443-3.966 9.617-.408 13.24l13.568 12.355c3.496 3.186 9.565 3.032 12.91-1.423l38.384-34.908c3.558-3.623 3.74-9.797-.408-13.24l-13.568-12.355c-3.496-3.186-9.565-3.032-12.91 1.423z"/></svg>
+                        Telegram
+                    </a>
+                    <a href="https://x.com/AURUMFOX_/status/1937041435905429909?t=00AH9pfCiDdpf_0d1AbslQ&s=19" target="_blank" rel="noopener noreferrer" class="social-btn twitter-btn">
+                        <svg class="social-icon" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.2 275.5 26.8 48H172.4L272.9 183.7 389.2 48zM364.4 421.8h39.1L123.6 90.1H80.5L364.4 421.8z"/></svg>
+                        Twitter (X)
+                    </a>
+                    <a href="https://solscan.io/token/GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd" target="_blank" rel="noopener noreferrer" class="social-btn solscan-btn">
+                        <svg class="social-icon" viewBox="0 0 576 512" ><path fill="currentColor" d="M573.5 241.1C559.5 245.9 544.7 248 529.7 248H528c-18.7 0-33.8 15.1-33.8 33.8v80.4c0 30.6-24.8 55.4-55.4 55.4h-35.3c-14.7 0-26.6 11.9-26.6 26.6v29.6c0 14.7 11.9 26.6 26.6 26.6H502c30.6 0 55.4-24.8 55.4-55.4v-30.8c0-10.9 9-19.9 19.9-19.9h.2c10.9 0 19.9 9 19.9 19.9v30.8c0 52.4-42.5 94.9-94.9 94.9h-35.3c-52.4 0-94.9-42.5-94.9-94.9V362.2c0-14.7-11.9-26.6-26.6-26.6h-35.3c-30.6 0-55.4-24.8-55.4-55.4V281.8c0-18.7-15.1-33.8-33.8-33.8h-1.7c-15 0-29.8-2.1-43.8-6.9-49.3-17.4-87.8-64.7-87.8-119.5C96 55.4 138.5 13 190.9 13H384c17.7 0 32 14.3 32 32s-14.3 32-32 32h-193.1c-17 0-30.8 13.8-30.8 30.8s13.8 30.8 30.8 30.8H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H190.9c-52.4 0-94.9 42.5-94.9 94.9 0 32.5 16.4 61.5 41.5 78.4 2.6 1.8 5.4 3.2 8.3 4.3 12.1 4.7 24.8 7.2 37.8 7.2h1.7c18.7 0 33.8 15.1 33.8 33.8v80.4c0 30.6 24.8 55.4 55.4 55.4h35.3c14.7 0 26.6 11.9-26.6 26.6v29.6c0 14.7-11.9 26.6-26.6 26.6h-35.3c-52.4 0-94.9-42.5-94.9-94.9V409.8c0-10.9-9-19.9-19.9-19.9h-.2c-10.9 0-19.9 9-19.9 19.9v30.8c0 52.4 42.5 94.9 94.9 94.9h35.3c52.4 0 94.9-42.5 94.9-94.9V409.8c0-18.7 15.1-33.8 33.8-33.8h1.7c15 0 29.8-2.1 43.8-6.9C523.5 351.7 562 304.4 562 249.6c0-32.5-16.4-61.5-41.5-78.4z"/></svg>
+                        Solscan
+                    </a>
+                    <a href="#aurum-announcements" class="social-btn news-btn">
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32zM576 224c0-17.7-14.3-32-32-32H480c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V224z"/></svg>
+                        Announcements
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us" class="section contact-section">
+            <div class="container">
+                <h2 class="main-heading">Contact Us</h2>
+                <p>Questions or suggestions? Contact us!</p>
+                <div class="contact-info">
+                    <p><strong>General Inquiries:</strong> <a href="mailto:info@aurumfox.com">info@aurumfox.com</a></p>
+                    <p><strong>Partnerships:</strong> <a href="mailto:partnerships@aurumfox.com">partnerships@aurumfox.com</a></p>
+                    <p><strong>AFOX Contract Address:</strong> <span class="highlight-text">GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd</span></p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <label for="contact-name">Your Name:</label>
+                    <input type="text" id="contact-name" name="name" required>
+
+                    <label for="contact-email">Your Email:</label>
+                    <input type="email" id="contact-email" name="email" required>
+
+                    <label for="contact-subject">Subject:</label>
+                    <input type="text" id="contact-subject" name="subject">
+
+                    <label for="contact-message">Message:</label>
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn btn-primary primary-btn">Send Message</button>
+                </form>
+                <p class="disclaimer"><i>Disclaimer: Aurum Fox (AFOX) is a meme token. The cryptocurrency market is highly volatile, and investments in meme tokens carry high risks. Always conduct your own research (DYOR).</i></p>
+            </div>
+        </section>
+
+        <section id="web3-site-home" class="section web3-section-alt">
+            <div class="container">
+                <h2 class="web3-heading">🎮 My Web3 Portal</h2>
+                <p class="web3-intro">Explore decentralized games, manage your NFTs, and discover Web3 advertising opportunities.</p>
+                <button id="connectWalletBtnWeb3" class="web3-btn">Connect Wallet</button>
+                <p class="web3-wallet-display">Your Wallet Address: <span id="walletAddressDisplayWeb3">Not Connected</span></p>
+                <div class="web3-features-grid">
+                    <div class="feature-card">
+                        <h3>🎮 Games</h3>
+                        <p>Explore blockchain games and earn rewards.</p>
+                        <a href="#games-section" class="web3-link">Go to Games</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🖼️ NFTs</h3>
+                        <p>Browse your NFT collections, mint new ones, and explore marketplaces.</p>
+                        <a href="#nft-section" class="web3-link">Explore NFTs</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📢 Ads</h3>
+                        <p>Place and view decentralized advertisements.</p>
+                        <a href="#ads-section" class="web3-link">View Ads</a>
+                    </div>
+                     <div class="feature-card">
+                        <h3>🏛️ DAO</h3>
+                        <p>Participate in governance and vote on proposals.</p>
+                        <a href="#dao-section" class="web3-link">Go to DAO</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>💰 Staking</h3>
+                        <p>Stake your AFOX tokens to earn passive income.</p>
+                        <a href="#staking-section" class="web3-link">Start Staking</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games-section" class="section web3-section">
+            <div class="container">
+                <h2 class="web3-heading">🕹️ Games</h2>
+                <p>This section will display user-uploaded games.</p>
+                <button id="uploadGameBtnWeb3" class="web3-btn">Upload New Game</button>
+                <div id="game-list" class="content-area web3-content-area games-grid">
+                    <p class="loading-message">Loading games...</p>
+                </div>
+                <button id="loadMoreGamesBtn" class="web3-btn">Load More Games</button>
+            </div>
+        </section>
+
+        <section id="nft-section" class="section web3-section-alt">
+            <div class="container">
+                <h2 class="web3-heading">🖼️ NFT Collections</h2>
+                <p>Manage your NFTs directly from the website!</p>
+
+                <button id="connectWalletNftBtn" class="web3-btn">Connect Wallet</button>
+                <p class="web3-wallet-display">Your Wallet Address: <span id="walletAddressDisplayNft">Not Connected</span></p>
+
+                <div class="nft-actions">
+                    <button id="viewMyNftsBtn" class="web3-btn">View My NFTs</button>
+                    <button id="mintNftBtn" class="web3-btn">Mint New NFT</button>
+                </div>
+
+                <h3 class="web3-subheading">Your NFTs:</h3>
+                <div id="user-nft-list" class="content-area web3-content-area nft-grid">
+                    <p class="info-message">Connect your wallet to see your NFTs.</p>
+                </div>
+
+                <h3 class="web3-subheading">List your NFT for sale:</h3>
+                <div class="nft-form-container">
+                    <form id="listNftForm" class="web3-form">
+                        <label for="nftToSell">Select NFT to sell:</label>
+                        <select id="nftToSell" name="nftToSell" required>
+                            <option value="">-- Please select an NFT --</option>
+                        </select>
+
+                        <label for="salePrice">Sale Price (SOL):</label>
+                        <input type="number" id="salePrice" name="salePrice" step="0.000001" min="0.000001" placeholder="e.g., 0.5" required>
+
+                        <label for="listingDuration">Listing Duration (Days):</label>
+                        <input type="number" id="listingDuration" name="listingDuration" min="1" max="365" value="7" required>
+
+                        <button type="submit" class="web3-btn">List NFT</button>
+                    </form>
+                </div>
+
+                <h3 class="web3-subheading">NFTs from Marketplaces:</h3>
+                <div id="marketplace-nft-list" class="content-area web3-content-area nft-grid">
+                    <p class="loading-message">Loading NFTs from marketplace...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mint-nft-section" class="section web3-section">
+            <div class="container">
+                <h2 class="web3-heading">✨ Create Your Own NFT (Minting)</h2>
+                <p>Unleash your creativity! Upload your artwork and mint it as a unique NFT on the Solana blockchain.</p>
+
+                <div class="nft-form-container">
+                    <form id="mintNftFormSection" class="web3-form" enctype="multipart/form-data">
+                        <label for="nftFile">Upload Image/Video:</label>
+                        <input type="file" id="nftFile" name="nftFile" accept="image/*,video/*" required>
+
+                        <label for="mintNftName">NFT Name:</label>
+                        <input type="text" id="mintNftName" name="mintNftName" placeholder="e.g., My Masterpiece #1" required>
+
+                        <label for="mintNftDescription">Description:</label>
+                        <textarea id="mintNftDescription" name="mintNftDescription" rows="4" placeholder="Tell us about your NFT..." required></textarea>
+
+                        <label for="mintNftAttributes">Attributes (e.g., "Background: Blue, Eyes: Green"):</label>
+                        <textarea id="mintNftAttributes" name="mintNftAttributes" rows="3" placeholder="Enter attributes in JSON or plain text, e.g., {'Rarity': 'Rare', 'Type': 'Art'}"></textarea>
+                        <small class="form-help-text">Please use JSON format for attributes for better compatibility (e.g., `[{"trait_type": "Rarity", "value": "Rare"}]`).</small>
+
+                        <button type="submit" class="web3-btn">Mint NFT</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="ads-section" class="section web3-section">
+            <div class="container">
+                <h2 class="web3-heading">📢 Ads</h2>
+                <p>Place your advertisements here!</p>
+                <button id="postAdBtnWeb3" class="web3-btn">Post Ad</button>
+                <div id="ad-list" class="content-area web3-content-area ad-list">
+                    <p class="loading-message">Loading advertisements...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dao-section" class="section web3-section-alt">
+            <div class="container">
+                <h2 class="web3-heading">🏛️ Decentralized Autonomous Organization (DAO)</h2>
+                <p class="web3-intro">Participate in Aurum Fox governance! Create proposals, vote, and shape the future of the project.</p>
+
+                <button id="connectWalletBtnDao" class="web3-btn">Connect Wallet</button>
+                <p class="web3-wallet-display">Your Wallet Address: <span id="walletAddressDisplayDao">Not Connected</span></p>
+
+                <div class="dao-actions">
+                    <button id="createProposalBtn" class="web3-btn">Create Proposal</button>
+                </div>
+
+                <h3 class="web3-subheading">Active Proposals</h3>
+                <div id="active-proposals-list" class="content-area web3-content-area dao-proposals-grid">
+                    <p class="loading-message">Loading active proposals...</p>
+                </div>
+
+                <h3 class="web3-subheading">Completed Proposals</h3>
+                <div id="completed-proposals-list" class="content-area web3-content-area dao-proposals-grid">
+                    <p class="loading-message">Loading completed proposals...</p>
+                </div>
+
+                <div id="createProposalModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="closeProposalModal">&times;</span>
+                        <h3 class="web3-heading">Create New DAO Proposal</h3>
+                        <form id="newProposalForm" class="web3-form">
+                            <label for="proposalTitle">Proposal Title:</label>
+                            <input type="text" id="proposalTitle" name="proposalTitle" placeholder="Enter proposal title" required>
+
+                            <label for="proposalDescription">Proposal Description:</label>
+                            <textarea id="proposalDescription" name="proposalDescription" rows="6" placeholder="Describe your proposal in detail..." required></textarea>
+
+                            <button type="submit" class="web3-btn">Submit Proposal</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="staking-section" class="section web3-section">
+            <div class="container">
+                <h2 class="web3-heading">💰 AFOX Staking</h2>
+                <p class="web3-intro">Stake your AFOX tokens to earn passive income and participate in project governance!</p>
+
+                <div class="staking-info-grid">
+                    <div class="info-card">
+                        <h3>Your AFOX Balance</h3>
+                        <p id="userAfoxBalance" class="info-value">0 AFOX</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Your Staked Amount</h3>
+                        <p id="userStakedAmount" class="info-value">0 AFOX</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Accrued Rewards</h3>
+                        <p id="userRewardsAmount" class="info-value">0 AFOX</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Annual Percentage Rate (APR)</h3>
+                        <p id="stakingApr" class="info-value">--%</p>
+                    </div>
+                </div>
+
+                <div class="staking-actions">
+                    <h3 class="web3-subheading">Stake AFOX</h3>
+                    <div class="input-group">
+                        <input type="number" id="stakeAmountInput" min="0.000001" step="0.000001" placeholder="Enter AFOX amount to stake">
+                        <button id="stakeAfoxBtn" class="web3-btn">Stake</button>
+                    </div>
+
+                    <h3 class="web3-subheading">Manage Staking</h3>
+                    <button id="claimRewardsBtn" class="web3-btn">Claim Rewards</button>
+                    <button id="unstakeAfoxBtn" class="web3-btn">Unstake Tokens</button>
+                </div>
+
+                <div class="staking-details">
+                    <h3 class="web3-subheading">Staking Details</h3>
+                    <ul>
+                        <li><strong>Minimum staking amount:</strong> <span id="minStakeAmount">1 AFOX</span></li>
+                        <li><strong>Lockup period:</strong> <span id="lockupPeriod">0 days (flexible)</span></li>
+                        <li><strong>Early unstake fee:</strong> <span id="unstakeFee">0%</span></li>
+                        <li><strong>Reward calculation:</strong> <span id="rewardCalculation">Daily</span></li>
+                    </ul>
+                    <p class="web3-note">Please connect your wallet to see live data and interact with staking.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aurum Fox Unified Portal. All rights reserved.</p>
+            <p>Created with ❤️ for the Web3 community.</p>
+            <p>Contract Address (example): <span id="contractAddress">GLkewtq8s2Yr24o5LT5mzzEeccKuSsy8H5RCHaE9uRAd</span> <button class="copy-btn">Copy</button></p>
+        </div>
+    </footer>
+
+    <div id="nftDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="nftDetailsContent" class="nft-detail-view">
+                <img id="nftDetailImage" src="" alt="NFT Image" class="nft-detail-image">
+                <h3 id="nftDetailName"></h3>
+                <p id="nftDetailDescription"></p>
+                <p><strong>Owner:</strong> <span id="nftDetailOwner"></span></p>
+                <p><strong>Mint Address:</strong> <span id="nftDetailMint"></span></p>
+                <div id="nftDetailAttributes">
+                    <h4>Attributes:</h4>
+                    <ul id="attributesList"></ul>
+                </div>
+                <p><strong>Transaction History:</strong> <span id="nftDetailHistory">(Loading...)</span></p>
+                <a id="nftDetailSolscanLink" href="#" target="_blank" rel="noopener noreferrer" class="web3-btn small-btn">View on Solscan</a>
+
+                <div class="nft-detail-actions">
+                    <button id="nftDetailBuyBtn" class="web3-btn green-btn" style="display:none;">Buy NFT</button>
+                    <button id="nftDetailSellBtn" class="web3-btn red-btn" style="display:none;">Sell NFT</button>
+                    <button id="nftDetailTransferBtn" class="web3-btn">Transfer NFT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificationContainer" style="position: fixed; top: 20px; right: 20px; z-index: 1000;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
